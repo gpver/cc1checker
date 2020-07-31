@@ -1,0 +1,34 @@
+import random
+import sys
+import os
+import time
+
+
+
+
+
+
+#================================================
+uesr = 'sk_live_' #اليوزر المراد التخمين عليه بين النقطتين اكتبه 
+chars2 = 'qwertyuiopasdfghjkl1234567890' #ارقام واحرف لو ترغب
+amount = input('amount that you want')
+amount = int(amount)
+
+length2 = input('How many characters you want')
+length2 = int(length2)
+
+
+for password in range(amount):
+    password = ''
+    
+    
+    for item in range(length2):
+         password = ''
+    for item in range(length2):
+        password += random.choice(chars2)
+
+
+
+    print (uesr+password)
+    with open('users.txt', 'a') as x:
+     x.write(uesr + password + '\n')
